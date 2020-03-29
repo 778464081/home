@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /*取消图片底部3像素距离*/
+        .box {
+            width: 550px;
+            height: 320px;
+            margin: 100px auto;
+            background-color: pink;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box ul li {
+            float: left;
+        }
+
+        .box ul {
+            width:1000%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="screen">
+    <ul>
+        <li><img src="1.jpg" alt=""/></li>
+        <li><img src="2.jpg" alt=""/></li>
+        <li><img src="3.jpg" alt=""/></li>
+    </ul>
+</div>
+<script src="common.js"></script>
+<script>
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    var current = 0;//只声明了一次
+    function f1() {
+        var ulObj = my$("screen").children[0];
+        current -= 10;
+        //每张图片宽度为300 当第四张图片播放结束就又重新开始播放第一张
+        if (current < -1200) {
+            ulObj.style.left = 0 + "px";
+            current = 0;
+        } else {
+            ulObj.style.left = current + "px";
+        }
+    }
+    //最开始没有获取焦点，那么通过定时任务自动移动图片
+    var timeId=setInterval(f1, 30);
+
+    //鼠标获得焦点
+    my$("screen").onmouseover=function () {
+        //停止
+        clearInterval(timeId);
+    };
+    //鼠标失去焦点
+    my$("screen").onmouseout=function () {
+        //继续
+        timeId=setInterval(f1, 30);
+    };
+
+</script>
+</body>
+</html>
