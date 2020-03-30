@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0330</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <style>
+            body{
+
+            }
+            .container{
+                width: 300px;
+                height: 40px;
+                margin: 100px auto;
+                border: 1px solid red;
+                text-align: center;
+            }
+            .one{
+                float: left;
+                color: gray;
+                line-height: 40px;
+                font-size: 20px;
+                margin: 0 5px;
+            }
+            .two{
+                float: left;
+                width: 230px;
+                height: 36px;
+                border: none;
+                outline: none;
+            }
+            .three{
+                display: block;
+                float: right;
+                color: gray;
+                line-height: 40px;
+                font-size: 20px;
+                margin: 0 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <i class="fa fa-lock one"></i>
+            <input class="two" type="text">
+            <i class="fa fa-eye three"></i>
+        </div>
+        <script>
+            let three = document.querySelector('.three');
+            let input = document.querySelector('.two')
+            let action = function () {
+               let list = three.classList;
+               if (list.contains('fa-eye')){
+                   list.remove('fa-eye')
+                   list.add('fa-eye-slash')
+                   input.type='password'
+               }else{
+                   list.remove('fa-eye-slash')
+                   list.add('fa-eye')
+                   input.type = 'text'
+               }
+            }
+
+            three.addEventListener('click',action,false);
+        </script>
+    </body>
+</html>
