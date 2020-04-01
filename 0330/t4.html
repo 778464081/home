@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .form-group{
+                width: 500px;
+                height: 300px;
+                margin: 100px auto;
+                font-size: 20px;
+            }
+            .btn input{
+                width: 50px;
+                height: 30px;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="form-group">
+        <label>你爱好的运动是？</label>
+        <label><input onclick="one()" type="checkbox" id="all" name="all" class="checkBox" value="全选/全不选" style="margin: 0;">全选/全不选</label>
+        <div id="paramList">
+            <label><input type="checkbox"  style="margin-left:5px;" name='paramName' class='checkBox'  value="足球"/>足球</label>
+            <label><input type="checkbox"  style="margin-left:5px;" name='paramName' class='checkBox'  value="篮球"/>篮球</label>
+            <label><input type="checkbox"  style="margin-left:5px;" name='paramName' class='checkBox'  value="羽毛球"/>羽毛球</label>
+        </div>
+        <div>
+            <input onclick="two()" type="button" value="全选">
+            <input onclick="three()" type="button" value="全不选">
+            <input onclick="four()" type="button" value="反选">
+            <input onclick="five()" type="button" value="提交">
+        </div>
+    </div>
+
+    <script>
+            let checklist = document.getElementsByName('paramName')
+            let all = document.getElementById('all')
+           function one() {
+                if(all.checked)
+                {
+                    for(let i=0;i<checklist.length;i++)
+                    {
+                        checklist[i].checked = true;
+                    }
+                }else{
+                    for(let j=0;j<checklist.length;j++)
+                    {
+                        checklist[j].checked = false;
+                    }
+                }
+            }
+
+            function two() {
+                for (let i=0; i<checklist.length; i++){
+                    checklist[i].checked = true;
+                }
+            }
+
+            function three() {
+                for (let i=0; i<checklist.length; i++){
+                    checklist[i].checked = false;
+                }
+            }
+
+            function four() {
+                for (let i=0; i<checklist.length; i++) {
+                    checklist[i].checked = !checklist[i].checked
+                }
+            }
+
+            function five() {
+                let nun=' ';
+                    for(let i=0;i<checklist.length;i++){
+                        if(checklist[i].checked){
+                          nun = nun +checklist[i].value +' ';
+                        }
+                    }
+                    alert('你选择了'+ nun);
+            }
+    </script>
+    </body>
+</html>
