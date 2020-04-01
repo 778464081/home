@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>picture switching</title>
+        <style type="text/css">
+            .wrapper{
+                width: 500px;
+                height: 300px;
+                margin: 100px auto;
+            }
+            .pic{
+                width: 500px;
+                height: 200px;
+            }
+            .btn1{
+                margin-left: 45%;
+            }
+            .word{
+                width:500px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload=function () {
+                let img=document.getElementsByTagName("img")[0];
+                let arr=["1.jpg" , "2.jpg" , "3.jpg" , "4.jpg" , "5.jpg"];
+                let btn1=document.querySelector(".btn1");
+                let btn2=document.querySelector(".btn2");
+                let word=document.querySelector(".word");
+                let i=0;
+                word.innerHTML="共有"+ arr.length +"张片，" + "现在是第1张";
+                let action1=function(){
+                    if(i>=4)
+                    {
+                        i=-1;
+                    }
+                    i++;
+                    img.src=arr[i];
+                    word.innerHTML="共有"+ arr.length +"张片，" + "现在是第"+( i+1)+"张";
+                };
+                let action2=function(){
+                    if(i<=0)
+                    {
+                        i=5;
+                    }
+                    i--;
+                    img.src=arr[i];
+                    word.innerHTML="共有"+ arr.length +"张片，" + "现在是第"+( i+1)+"张";
+                };
+                btn2.addEventListener("click",action1,false);
+                btn1.addEventListener("click",action2,false);
+            };
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="word">共五张图片，现在是第一张</div>
+            <img src="1.jpg " alt="" class="pic">
+        </div>
+        <button type="button" class="btn1">上一张</button>
+        <button type="button" class="btn2">下一张</button>
+
+    </body>
+
+</html>
