@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>栅格系统</title>
+        <style type="text/css">
+
+            /* 先确定 栅格系统 中浮动的子元素的父元素的样式 */
+            .row {  display: block ;  overflow: hidden ; }
+
+            /* 再将一个父元素的一整行均分为五等份，确定每份所占宽度 */
+            .cells-5-1 { float: left ; width: 20% ; }
+            .cells-5-2 { float: left ; width: 40% ; }
+            .cells-5-3 { float: left ; width: 60% ; }
+            .cells-5-4 { float: left ; width: 80% ; }
+
+            h3 { text-align: center ; }
+            .wrapper { border: 1px solid blue ; width: 80% ;  margin: 5px auto ;  }
+            .odd { background-color: #FFFF00 ; }
+            .even { background-color: #dedede ; }
+            .item { height: 100px ; }
+        </style>
+    </head>
+    <body>
+
+        <h3>栅格系统</h3>
+
+        <div class="row wrapper first">
+            <div class="cells-5-1 item odd"></div>
+            <div class="cells-5-1 item even"></div>
+            <div class="cells-5-1 item odd"></div>
+            <div class="cells-5-1 item even"></div>
+            <div class="cells-5-1 item odd"></div>
+        </div>
+
+        <div class="row wrapper second">
+            <div class="cells-5-4 item odd"></div> <!-- 80% -->
+            <div class="cells-5-1 item even"></div> <!-- 20% -->
+        </div>
+
+    </body>
+</html>

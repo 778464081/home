@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* 先确定 栅格系统 中浮动的子元素的父元素的样式 */
+.row {
+    display: block ; /* 父元素将以块元素形式存在 */
+    overflow: hidden ; /* 如果所有子元素都浮动了，则可能导致它们的父元素塌陷，这里采用了 overflow 来解决 */
+}
+
+/* 将一个父元素的一整行均分为五等份 */
+.cells-5-1 { float: left ; width: 20% ; }
+.cells-5-2 { float: left ; width: 40% ; }
+.cells-5-3 { float: left ; width: 60% ; }
+.cells-5-4 { float: left ; width: 80% ; }
+
+

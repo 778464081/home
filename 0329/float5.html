@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>清除浮动</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .wrapper { border: 1px solid blue ; width: 800px ;  margin: 50px auto ;  }
+            .item { float: left ; width: 33.333333333% ; height: 100px ;  }
+            .odd { background-color: #FFFF00 ; }
+            .even { background-color: #dedede ; }
+
+            .container {
+                /* clear: left | right | both | none ; */
+                clear: both ;
+                border: 1px solid green ;
+                width: 80% ;
+                margin: auto ;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h3>清除浮动</h3>
+
+        <div class="wrapper">
+            <span class="item odd">叶洋</span>
+            <span class="item even">先生</span>
+            <span class="item odd">有才</span>
+        </div>
+
+        <div class="container">
+            <div> 清除浮动不是把浮动元素删除了，而是让自己 左侧、右侧 或 左右两侧 都没有浮动元素</div>
+            <div> 比如 clear : both 产生的效果是元素单独占一行，左侧和右侧都没有浮动元素</div>
+        </div>
+
+
+    </body>
+</html>

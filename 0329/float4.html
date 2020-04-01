@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>不务专业的定位方式</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            /* 如果 为 .wrapper 指定 overflow : hidden 则可能导致 子元素的阴影无法显示 */
+            .wrapper { border: 1px solid blue ; width: 800px ;  margin: 50px auto ; overflow: hidden ; }
+            /* 但是如果 为每个子元素都预留了充足的外边距，则可以显示阴影*/
+            .item { float: left ; width: 30% ; height: 100px ; margin: 20px 0 20px 2.5% ;  }
+
+            .item:hover { box-shadow: 0 0 10px 8px red ; }
+
+            .odd { background-color: #FFFF00 ; }
+            .even { background-color: #dedede ; }
+        </style>
+    </head>
+    <body>
+
+        <h3>通过为父元素设置 overflow : hidden 来解决父元素塌陷问题 </h3>
+
+        <div class="wrapper">
+            <span class="item odd">叶洋</span>
+            <span class="item even">先生</span>
+            <span class="item odd">有才</span>
+        </div>
+
+
+
+    </body>
+</html>

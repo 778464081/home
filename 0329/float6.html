@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>栅格系统</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .wrapper { border: 1px solid blue ; width: 80% ;  margin: 5px auto ; overflow: hidden ; }
+            .odd { background-color: #FFFF00 ; }
+            .even { background-color: #dedede ; }
+
+            .item { float: left ; height: 100px ;  }
+
+            /* 后代选择器 : 仅选择 .first 元素内部的 .item 元素 */
+            .first .item { width: 20% ; }
+            /* 后代选择器 : 仅选择 .second 元素内部的 .item 元素 */
+            .second .item { width: 25% ;  }
+
+        </style>
+    </head>
+    <body>
+
+        <h3>栅格系统</h3>
+
+        <div class="wrapper first">
+            <div class="item odd"></div>
+            <div class="item even"></div>
+            <div class="item odd"></div>
+            <div class="item even"></div>
+            <div class="item odd"></div>
+        </div>
+
+        <div class="wrapper second">
+            <div class="item odd"></div>
+            <div class="item even"></div>
+            <div class="item odd"></div>
+            <div class="item even"></div>
+        </div>
+
+        <div class="wrapper third">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+        </div>
+
+        <div class="wrapper fourth">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+        </div>
+
+    </body>
+</html>

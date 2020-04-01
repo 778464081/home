@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>不务专业的定位方式</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .wrapper { border: 1px solid blue ; width: 800px ;  margin: 50px auto ;  }
+            .item { float: left ; width: 33.333333333% ; height: 100px ;  }
+            .odd { background-color: #FFFF00 ; }
+            .even { background-color: #dedede ; }
+        </style>
+    </head>
+    <body>
+
+        <h3>不务专业的定位方式 </h3>
+
+        <div class="wrapper">
+            <span class="item odd">叶洋</span>
+            <span class="item even">先生</span>
+            <span class="item odd">有才</span>
+        </div>
+
+        <div>
+            <div> 不论是 块元素( block-element ) 还是 内联元素 ( inline-element ) 只要采用了 浮动( left 或 right ) 都会导致元素在同一行。</div>
+            <div> 如果父元素的某一行已经排列满了，则到下一行继续显示</div>
+            <div> 内联元素在浮动( left 或 right )之后 可以为其设置 宽度 和 高度 以及外边距</div>
+            <div> 如果某个父元素内部所有子元素都采用 浮动 ，则会导致 父元素 塌陷，可以通过设置父元素的高度 或 为父元素指定 overflow : hidden 来解决</div>
+            <div> 父元素塌陷后，可能导致父元素之后的元素错位</div>
+        </div>
+
+
+    </body>
+</html>
