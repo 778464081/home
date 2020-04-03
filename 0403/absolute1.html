@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位 : absolute</title>
+        <style type="text/css">
+            .outer {
+                position: static ; /* 默认的 */
+                border: 2px solid blue ; width: 400px ; height: 300px ; margin: 100px auto ;
+            }
+            .box {
+                position: static ; /* 默认的 */
+                border: 2px solid red ; width: 346px ; height: 246px ; margin: 25px ;
+            }
+            .inner { border: 2px solid green ; width: 292px ; height: 192px ; margin: 25px ; }
+            .luck {
+                /* 当当前元素的所有父元素都采static定位时，就相对于浏览器窗口来定位 */
+                position: absolute ; /* 绝对定位 */
+                left : 0 ;
+                top : 0 ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="outer">
+            <div class="box">
+                <div class="inner luck"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

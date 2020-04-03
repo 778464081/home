@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位 : absolute</title>
+        <style type="text/css">
+            .test {
+                /* 相对于 当前元素的第一个非static定位的父元素进行定位 或 相对于浏览器窗口进行定位 */
+                position: absolute ; /* 绝对定位 */
+                right: 0 ;
+                top: 0 ;
+                border: 2px solid green ;
+                height: 50% ; /* 采用绝对定位后，高度可以使用 百分比来设置 */
+                width: 150% ; /* 当采用绝对定位后，元素宽度默认是 0 而不是父元素的 100% ，因此需要显式设置宽度 */
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="test"></div>
+
+    </body>
+</html>

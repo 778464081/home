@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位 : absolute</title>
+        <style type="text/css">
+            /* 通配符选择器 */
+            * { border: 1px solid grey ; margin: 50px ; }
+            .outer {  border: 2px solid blue ;  }
+            .box {  border: 2px solid red ;  }
+            .inner { border: 2px solid green ; height: 200px ; }
+            .luck {
+                /* 当当前元素的所有父元素都采用static定位时，就相对于浏览器窗口来定位 */
+                position: absolute ; /* 绝对定位 */
+                /* left : 0 ; /* 表示距离浏览器左侧边缘的偏移量 ( 正数向右，负数向左 )*/
+                /* top : 0 ; /* 表示距离浏览器顶部边缘的偏移量 ( 正数向下，负数向上 )*/
+                bottom : 0 ; /* 表示距离浏览器底边边缘的偏移量 ( 正数向上，负数向下 )*/
+                right : 0 ; /* 表示距离浏览器右侧边缘的偏移量 ( 正数向左，负数向右 )*/
+                width: 800px ;
+                margin: 0 ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="outer">
+            <div class="box">
+                <div class="inner luck"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

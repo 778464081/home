@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位: static</title>
+        <style type="text/css">
+            .wrapper {
+                border: 1px solid blue ;
+                width: 800px ;
+                height: 200px ;
+            }
+
+            .first .title {
+                width: 400px ; height: 200px ; background-color: #dedede ;
+                position : static ; /* 对于任意元素来说，其 position 默认的取值就是 static  */
+                left : 0 ; /* 当 position 属性取值为 static 时，那么 left 、right 取值无效 */
+                top : 0 ; /* 当 position 属性取值为 static 时，那么 top 、bottom 取值无效 */
+            }
+            .first .link {
+                width: 400px ; height: 200px ; background-color: #fffdab;
+                position : static ;
+                right : 0 ;
+                top : 0 ;
+            }
+
+            .second .title {
+                width: 400px ; height: 200px ; background-color: #dedede ;
+                position : static ;
+                left : 0 ;
+                top : 0 ;
+            }
+            .second .link {
+                width: 400px ; height: 200px ; background-color: #fffdab;
+                position : static ;
+                right : 0 ;
+                top : 0 ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h3>理解默认文档流: 从左到右、从上向下排列</h3>
+
+        <div class="wrapper first">
+            <div class="title">手机</div>
+            <div class="link">查看全部</div>
+        </div>
+
+        <hr style="margin-top: 220px ; ">
+
+        <div class="wrapper second">
+            <span class="title">手机</span>
+            <span class="link">查看全部</span>
+        </div>
+        
+    </body>
+</html>

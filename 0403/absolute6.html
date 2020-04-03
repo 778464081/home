@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位 : absolute</title>
+        <style type="text/css">
+            .test {
+                height: 400px ;
+                width: 600px ;
+                /* 相对于 当前元素的第一个非static定位的父元素进行定位 或 相对于浏览器窗口进行定位 */
+                position: absolute ; /* 绝对定位 */
+                left: 50% ;
+                top: 50% ;
+                border: 1px solid blue ;
+                margin-top: -200px ; /* 顶部外边距取元素高度的一半 向上移动用负值 */
+                margin-left: -300px ; /* 左侧外边距取元素宽度的一半 向左移动用负值 */
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="test"></div>
+
+    </body>
+</html>

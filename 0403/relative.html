@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位 : relative</title>
+        <style type="text/css">
+            .outer { border: 2px solid blue ; width: 400px ; height: 200px ; margin: 50px auto ; }
+            /* 通过调整尺寸，使 inner 恰好位于 outer 内部 */
+            .inner { border: 2px solid red ; width: 100px ; height: 100px ;
+             margin: 100px auto;
+            }
+
+            .first {
+                /* 相对于元素本来的位置进行定位 */
+                /*position: relative ; !* 相对定位 *!*/
+                /* 尽管采用了相对定位，但是没有修改 left /right 、top/bottom 的取值，元素仍然在原来位置 */
+            }
+
+            .second {
+                position : relative ; /* 相对于元素本来的位置进行定位 */
+                left : 20px ; /* 元素在其本来位置基础上向右移动 20 像素*/
+                top : 20px ; /* 元素在其本来位置基础上向下移动 20 像素*/
+            }
+
+            .third {
+                position : relative ; /* 相对于元素本来的位置进行定位 */
+                right : 20px ; /* 元素在其本来位置基础上向左移动 20 像素*/
+                bottom : 20px ; /* 元素在其本来位置基础上向上移动 20 像素*/
+            }
+        </style>
+    </head>
+    <body>
+
+        <h3>相对定位(relative) 是相对于当前元素在默认文档流中的本来位置进行定位</h3>
+
+        <div class="outer">
+            <!-- inner 外部的 outer 主要是起参照作用，我们不准备参照 outer 进行定位 -->
+            <!-- 当对  first 采用相对(relative)定位时，是相对于 first 元素本来的位置进行定位，不是相对于父元素 -->
+            <div class="inner first"></div>
+        </div>
+
+        <div class="outer">
+            <!-- inner 外部的 outer 主要是起参照作用，我们不准备参照 outer 进行定位 -->
+            <!-- 当对  second 采用相对(relative)定位时，是相对于 second 元素本来的位置进行定位，不是相对于父元素 -->
+            <div class="inner second"></div>
+        </div>
+
+        <div class="outer">
+            <!-- inner 外部的 outer 主要是起参照作用，我们不准备参照 outer 进行定位 -->
+            <!-- 当对  third 采用相对(relative)定位时，是相对于 third 元素本来的位置进行定位，不是相对于父元素 -->
+            <div class="inner third"></div>
+        </div>
+        
+    </body>
+</html>
