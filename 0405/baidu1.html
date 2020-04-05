@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>百度</title>
+        <style type="text/css">
+            body { margin: 0 ; padding: 0 ; }
+            .wrapper { border-bottom: 1px solid blue ; height: 40px ; }
+            .nav { float: right ; width: 40% ; height: 40px ; /* background-color: #1e9fff ; */ }
+
+            /* 采用 "selectorA>selectB" 形式的选择器就是 亲子选择器 ( 国内资料也翻译成子元素选择器 ) */
+            /* 注意: 父子元素选择器之间是使用 > 连接起来的，在 > 之前的是 父元素 ，在 > 之后的是直接子元素 */
+            /* 这里的 .nav>* 表示选择 .nav 元素内部的所有直接子元素 ( 不管子元素是什么样的标签 ) */
+            .nav>* {
+                float: left ;
+                height: 30px ;
+                margin: 10px 16px 0px 0px ;
+            }
+
+            /* 采用 "selectA selectB " 形式的选择器就是 后代选择器 ( 国内也有资料翻译成 子孙选择器 或 嵌套选择器 ) */
+            /* 注意: 父子元素选择器之间是使用 空格 连接起来的，在 空格 之前的是 祖先 ，在 空格 之后的是 后代 */
+            /* 这里的 .nav a  表示选择 .nav 元素内部的所有的 a 元素 ( 不论是那一代的 ) */
+            .nav a {
+                text-decoration: none ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="nav">
+                <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" >抗击肺炎</a>
+                <a href="http://news.baidu.com" >新闻</a>
+                <a href="https://www.hao123.com" >hao123</a>
+                <a href="http://map.baidu.com">地图</a>
+                <a href="http://v.baidu.com" >视频</a>
+                <a href="http://tieba.baidu.com" >贴吧</a>
+                <a href="http://xueshu.baidu.com" >学术</a>
+                <a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F&amp;sms=5" >登录</a>
+                <div>
+                    <a href="http://www.baidu.com/gaoji/preferences.html" >设置</a>
+                </div>
+                <div>
+                    <a href="http://www.baidu.com/more/" >更多产品</a>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

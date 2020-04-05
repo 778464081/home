@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>百度</title>
+        <style type="text/css">
+            body { margin: 0 ; padding: 0 ; }
+            .wrapper { border-bottom: 1px solid blue ; height: 40px ; }
+            .nav { float: right ; width: 38% ; height: 40px ; /* background-color: #1e9fff ; */ }
+
+            /* 采用 "selectorA>selectB" 形式的选择器就是 亲子选择器 ( 国内资料也翻译成子元素选择器 ) */
+            /* 注意: 父子元素选择器之间是使用 > 连接起来的，在 > 之前的是 父元素 ，在 > 之后的是直接子元素 */
+            /* 这里的 .nav>* 表示选择 .nav 元素内部的所有直接子元素 ( 不管子元素是什么样的标签 ) */
+            .nav>* {
+                float: left ;
+                height: 25px ;
+                margin: 10px 20px 5px 0px ;
+            }
+
+            /* 采用 "selectA selectB " 形式的选择器就是 后代选择器 ( 国内也有资料翻译成 子孙选择器 或 嵌套选择器 ) */
+            /* 注意: 父子元素选择器之间是使用 空格 连接起来的，在 空格 之前的是 祖先 ，在 空格 之后的是 后代 */
+            /* 这里的 .nav a  表示选择 .nav 元素内部的所有的 a 元素 ( 不论是那一代的 ) */
+            .nav a {
+                text-decoration: none ;
+                font-size: 13px ;
+                font-weight: bold ;
+            }
+
+            .settings {
+                position: relative ; /* 这里设置 relative 方式定位是为了让子元素能够相对于 该元素进行定位 */
+                width: 40px ; background-color: #FFFF00; text-align: center ;
+            }
+
+            .settings .menu {
+                width: 200% ;
+                height: 155px ;
+                position: absolute ; /* 绝对定位，期望相对于首个非static定位的父元素来定位 */
+                left : -50% ;
+                top: 30px ;
+            }
+
+            .settings .menu .arrow {
+                border-left: 1px solid red ;
+                border-top : 1px solid red ;
+                width: 10px ;
+                height: 10px ;
+                background-color: #ffffff;
+                transform: rotate(45deg);
+                margin: auto ;
+                position: relative ;
+                z-index: 20;
+            }
+
+            .settings .menu .items {
+                border: 1px solid #cecece;
+                box-shadow: 0 0 5px 4px #dedede ;
+                height: 150px ;
+                position: absolute ; /* 绝对定位，期望相对于首个非static定位的父元素来定位 */
+                left: 0 ;
+                top : 5px ;
+                width: 100% ;
+                z-index: 10 ;
+            }
+
+            .more {
+                width: 70px ;
+                margin-right: 0px ;
+                background-color: #1e9fff ;
+                text-align: center ;
+            }
+
+            .more a {
+                color: #fff ;
+                position: relative ;
+                z-index: 20 ;
+            }
+
+            .more .products {
+                position: absolute ;
+                top : 0 ;
+                right:  0 ;
+                height: 100% ;
+                min-height: 600px ;
+                width: 90px ;
+                background-color: #e8e8e8;
+                border-left: 1px solid #b2b2b2;
+                display: none ;
+            }
+
+            /* 当 鼠标悬浮到 .more 时 ( 含其内部子元素 ) 其内部的 .products 元素就显示出来 */
+            .more:hover .products {
+                display: block ;
+                z-index: 10 ;
+            }
+
+            .more:hover>a { color: #333 ; }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="nav">
+                <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" >抗击肺炎</a>
+                <a href="http://news.baidu.com" >新闻</a>
+                <a href="https://www.hao123.com" >hao123</a>
+                <a href="http://map.baidu.com">地图</a>
+                <a href="http://v.baidu.com" >视频</a>
+                <a href="http://tieba.baidu.com" >贴吧</a>
+                <a href="http://xueshu.baidu.com" >学术</a>
+                <a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F&amp;sms=5" >登录</a>
+                <div class="settings">
+                    <a href="http://www.baidu.com/gaoji/preferences.html" >设置</a>
+                    <div class="menu">
+                        <div class="arrow"></div>
+                        <div class="items"></div>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="http://www.baidu.com/more/" >更多产品</a>
+                    <div class="products"></div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
