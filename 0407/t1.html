@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <style>
+            .center{
+                position: relative;
+                margin: 60px auto 0;
+                width: 80%;
+            }
+            .nav{
+                position: relative;
+                float: left;
+                padding: 20px 0;
+                width: 20%;
+                background: rgba(105,101,101,.6);
+
+            }
+            .photo{
+                float:right;
+                width: 80%;
+            }
+            .photo img{
+                display: block;
+                width:100%;
+                height:496px;
+            }
+            .navigate{
+                height: 42px;
+                width: 100%;
+                text-align: center;
+                clear: both;
+            }
+            .navigate:hover{
+                background-color:#ff6700 ;
+            }
+           .navigate span{
+               display: block;
+               font-size: 15px;
+               color: #fff;
+               line-height: 42px;
+
+           }
+            .title{
+                float: left;
+                margin-left: 10px;
+            }
+            .single{
+                float:right;
+                margin-right: 10px;
+                margin-top: 4px;
+            }
+
+
+            /* navigate 之后 */
+
+            /*hover后的主界面 */
+            .navigator{
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 400%;
+                height: 496px;
+                background-color: #fff;
+                box-shadow: 0 0 10px #00000027;
+            }
+
+
+            /*第一个*/
+            .phone{
+                display: none;
+            }
+            .navigate:hover .phone{
+                display: block;
+            }
+           .phone .one{
+                float: left;
+                margin-left: 10px;
+                margin-top: 20px;
+                text-align: center;
+            }
+           .phone .one img{
+                line-height: 42px;
+                margin-left: 10px;
+                margin-right: 10px;
+                float: left;
+                width: 40px;
+                vertical-align: middle;
+                height: 40px;
+                display: block;
+            }
+            .phone .one span{
+                margin: 0;
+                width: 170px;
+                float: left;
+                text-align: left;
+                color: black;
+                line-height: 42px ;
+            }
+
+
+            /*第二个*/
+            .tv{
+                display: none;
+            }
+            .navigate:hover .tv{
+                display: block;
+            }
+            .tv .one{
+                float: left;
+                margin-left: 10px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .tv .one img{
+                line-height: 42px;
+                margin-left: 10px;
+                margin-right: 10px;
+                float: left;
+                width: 40px;
+                vertical-align: middle;
+                height: 40px;
+                display: block;
+            }
+            .tv .one span{
+                margin: 0;
+                width: 170px;
+                float: left;
+                text-align: left;
+                color: black;
+                line-height: 42px ;
+            }
+
+            /*第三个*/
+           .ipad{
+               width: 200%;
+               display:none;
+           }
+            .navigate:hover .ipad{
+                display: block;
+            }
+            .ipad .one{
+                float: left;
+                margin-left: 10px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .ipad .one img{
+                line-height: 42px;
+                margin-left: 10px;
+                margin-right: 10px;
+                float: left;
+                width: 40px;
+                vertical-align: middle;
+                height: 40px;
+                display: block;
+            }
+            .ipad .one span{
+                margin: 0;
+                width: 170px;
+                float: left;
+                text-align: left;
+                color: black;
+                line-height: 42px ;
+            }
+
+
+            /*第四个*/
+            .board{
+                width: 300%;
+                display: none;
+            }
+            .navigate:hover .board{
+                display: block;
+            }
+            .board .one{
+                float: left;
+                margin-left: 10px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .board .one img{
+                line-height: 42px;
+                margin-left: 10px;
+                margin-right: 10px;
+                float: left;
+                width: 40px;
+                vertical-align: middle;
+                height: 40px;
+                display: block;
+            }
+            .board .one span{
+                margin: 0;
+                width: 170px;
+                float: left;
+                text-align: left;
+                color: black;
+                line-height: 42px ;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div class="nav">
+                <div class="navigate">
+                    <span class="title">手机 电话卡</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                    <div class="navigator phone">
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigate">
+                    <span class="title">电视 盒子</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                    <div class="navigator tv">
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                <img src="phone.webp" alt="">
+                                <span>Redmi K30 Pro</span>
+                            </div>
+                            <div class="one">
+                                    <img src="phone.webp" alt="">
+                                    <span>Redmi K30 Pro</span>
+                            </div>
+                      </div>
+                </div>
+                <div class="navigate">
+                    <span class="title">笔记本 显示器 平板</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                    <div class="navigator ipad">
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigate">
+                    <span class="title">家电 插线板</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                    <div class="navigator board">
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                        <div class="one">
+                            <img src="phone.webp" alt="">
+                            <span>Redmi K30 Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigate">
+                    <span class="title">出行 穿戴</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+                <div class="navigate">
+                    <span class="title">智能 路由器</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+                <div class="navigate">
+                    <span class="title">电源 配件</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+                <div class="navigate">
+                    <span class="title">健康 儿童</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+                <div class="navigate">
+                    <span class="title">耳机 音箱</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+                <div class="navigate">
+                    <span class="title">生活 箱包</span>
+                    <span class="single"><i class="fa fa-angle-right fa-2x"></i></span>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="4.jpg" alt="">
+            </div>
+        </div>
+    </body>
+</html>
