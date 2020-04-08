@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: #e5e5e5;
+            }
+            .block{
+                width: 330px;
+                height: 40px;
+                margin: 200px auto;
+            }
+            .one{
+                float: left;
+                width: 255px;
+                position: relative;
+                height: 50px;
+                background-color: #fff;
+                text-align: center;
+                border:1px solid #00000027;
+            }
+            .one input{
+                margin-left: 10px;
+                display: block;
+                border: none;
+                outline: none;
+                width: 245px;
+                height: 50px;
+            }
+            .one .title{
+                position: absolute;
+                top: 14px;
+                right: 12px;
+                text-align: right;
+            }
+            .one .list{
+                position: absolute;
+                top: 51px;
+                left: -1px;
+                width: 100%;
+                border: 1px solid orange;
+                border-top: none;
+                background-color: #fff;
+                display: none;
+            }
+            .list .list-item{
+                width: 225px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 13px;
+                padding-left: 30px;
+                text-align: left;
+
+            }
+            .list-item:hover{
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+
+            .title span{
+                display: inline-block;
+                margin-left: 5px;
+                font-size: 12px;
+                background-color: #eee;
+                color: #757575;
+
+            }
+            .btn{
+                float: left;
+                width:52px;
+                position: relative;
+                height: 50px;
+                background-color: #fff;
+                border: 1px solid #00000027;
+                border-left: none;
+                cursor: pointer;
+            }
+            .btn input{
+                display: block;
+                width: 52px;
+                height: 50px;
+                border: none;
+                outline: none;
+                margin: 0;
+                background-color: #fff;
+                cursor: pointer;
+            }
+            .btn i{
+                position: absolute;
+                top: 17px;
+                left: 18px;
+                color: gray;
+            }
+            .btn:hover input{
+                background-color: orange;
+            }
+            .btn:hover i{
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block">
+            <div class="one">
+                <input type="text">
+                <div class="title">
+                    <span>小米10</span>
+                    <span>Redmi K30 Pro</span>
+                </div>
+                <div class="list">
+                    <div class="list-item">Redmi K30</div>
+                    <div class="list-item">小米10</div>
+                    <div class="list-item">Redmi note 8</div>
+                    <div class="list-item">小米CC9</div>
+                    <div class="list-item">小米电视</div>
+                    <div class="list-item">电冰箱</div>
+                    <div class="list-item">武汉加油</div>
+                </div>
+            </div>
+            <div class="btn">
+                <input type="button">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <script>
+            let one = document.querySelector('.one');
+            let title = document.querySelector('.title');
+            let btn = document.querySelector('.btn');
+            let list =document.querySelector('.list');
+            one.onclick=function (e) {
+                title.style.display = 'none';
+                one.style.borderColor= 'orange';
+                btn.style.borderColor= 'orange';
+                list.style.display= 'block';
+                e.stopPropagation();
+            };
+
+            document.onclick=function () {
+                title.style.display = 'block';
+                one.style.borderColor= '#00000027';
+                btn.style.borderColor= '#00000027';
+                list.style.display='none';
+            }
+        </script>
+    </body>
+</html>
