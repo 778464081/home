@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>透明度问题</title>
+        <style type="text/css">
+            body { background-color: #dedede ; }
+            .wrapper { border: 1px solid blue ; width: 50% ; margin: 25px auto ;}
+            .parent {  background-color: #1e9fff;  }
+
+            .child {  height: 100px ;  }
+            .first { background-color: #9932CC ; opacity: 1!important; ;  }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="parent">
+                <div class="child first"></div>
+                <div class="child second"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

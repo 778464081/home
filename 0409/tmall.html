@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            body { background-color: #dedede ; }
+            .wrapper { border: 1px solid blue ; width: 1200px ; margin: 25px auto ; overflow: hidden ; }
+            .brand { position: relative ; width: 120px ; height: 100px ; float: left ; }
+            .brand .image {
+                background-color: #fff;
+                background-image: url("snd.webp") ;
+                background-repeat: no-repeat ;
+                background-position: center ;
+                background-size: 90% ; /* 让元素包含整个背景图 */
+                width: 120px ;
+                height: 100px ;
+                position: absolute ;
+                left: 0 ;
+                top: 0 ;
+                z-index: 10; /* 设置元素的前后顺序 */
+            }
+
+            .brand .mask {
+                width: 120px ;
+                height: 100px ;
+                position: absolute ;
+                left: 0 ;
+                top: 0 ;
+                z-index: 11 ;
+                opacity: 0 ; /* 让 .mask 完全透明 ( 含内部子元素 ) */
+                background-color: rgba(24, 24, 24, 0.95);
+            }
+
+            .brand .mask:hover {
+                opacity: 1 ; /* 让 .mask 完全不透明 ( 含内部子元素 )*/
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+            <div class="brand">
+                <div class="image"></div>
+                <a href="" class="mask">
+                    <div>施耐德</div>
+                    <div>点击进入</div>
+                </a>
+            </div>
+        </div>
+        
+    </body>
+</html>

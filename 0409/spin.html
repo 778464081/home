@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+
+        <style type="text/css">
+            .wrapper {  border : 1px solid blue ; padding: 15px ; margin: 15px ;  }
+            .wrapper>i { font-size: 30px ; }
+
+
+            @keyframes myspin { /* myspin 是动画名称 */
+                0% { /* 表示动画起始位置对应的关键帧 */
+                    transform: rotate(0deg); /* rotate 是一个可以将元素按照指定角度旋转的函数*/
+                }
+                100% { /* 表示动画结束位置对应的关键帧 */
+                    transform: rotate(359deg);
+                }
+            }
+
+            .rotate:hover {
+                /* animation :  动画名称   播放时间   播放次数  timing-function */
+                animation: myspin 800ms 1 linear ;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <i class="fa fa-superpowers"></i>
+            <i class="fa fa-superpowers fa-spin"></i>
+        </div>
+
+        <div class="wrapper">
+            <i class="fa fa-superpowers rotate"></i>
+        </div>
+
+        <div class="wrapper">
+            直接在自己页面上使用其它网站的图片(链接)
+        </div>
+
+        <div class="wrapper">
+            <img src="//img.alicdn.com/i2/2/TB1ilbUHpXXXXb8XXXXSutbFXXX.jpg_200x200q100.jpg_.webp">
+        </div>
+
+        <div class="wrapper">
+            <img src="https://img.alicdn.com/i2/2/TB1ilbUHpXXXXb8XXXXSutbFXXX.jpg_200x200q100.jpg_.webp">
+        </div>
+        
+    </body>
+</html>
