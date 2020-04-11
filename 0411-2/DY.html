@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+        <style>
+            body{
+                background-color: #e5e5e5;
+            }
+            ul{
+                float: right;
+                margin-right: 100px;
+                list-style: none;
+                line-height: 75px;
+            }
+            li{
+                position: relative;
+                line-height: 55px;
+                height: 55px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 25px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .c1{
+                position: absolute;
+                top: 45px;
+                left: -50%;
+                width: 198px;
+                height: 42px;
+                background-image: url("bc.png");
+                background-position: 0 0;
+                background-size: cover;
+                font-size: 14px;
+                line-height: 50px;
+                color: #fff;
+                text-align: center;
+            }
+            .c3{
+                position: absolute;
+                top:45px;
+                left: -10px;
+                width: 96px;
+                padding: 8px 0;
+                background-color: #fff;
+                display: none;
+            }
+            .c3 span{
+                display: block;
+                width: 100%;
+                font-size: 15px;
+                line-height: 40px;
+                text-align: center;
+            }
+            .c3 span:hover{
+                background-color: rgba(0, 0, 0, 0.09);
+                cursor: pointer;
+            }
+            .cp:hover .c3{
+                display: block;
+            }
+            .mute{
+                width: 22px;
+                height: 22px;
+                background-image: url("mute.png");
+                background-size: 100%;
+                background-position: 0 0 ;
+                background-repeat: no-repeat;
+            }
+            .unmute{
+                width: 22px;
+                height: 22px;
+                background-image: url("unmute.png");
+                background-size: 100%;
+                background-position: 0 0 ;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="">创作服务平台</a>
+                <div class="c1">原【视频上传】已并入此功能</div>
+            </li>
+            <li>
+                <a href="">开放平台</a>
+            </li>
+            <li class="cp">
+                <a href="">产品系列</a>
+                <i class="fa fa-angle-down"></i>
+                <div class="c3">
+                    <span>抖音火山版</span>
+                    <span>剪映</span>
+                    <span>多闪</span>
+                </div>
+            </li>
+            <li>
+                <a href="">抖音直播</a>
+            </li>
+            <li>
+                <a href="">合作入驻</a>
+            </li>
+            <li>
+                <a href="">企业合作</a>
+            </li>
+            <li>
+                <a href="">联系我们</a>
+            </li>
+            <li class="mute"></li>
+        </ul>
+        <script>
+            let a= document.querySelector('.mute');
+            let action= function () {
+                if(a.classList.contains('mute')){
+                    a.classList.remove('mute');
+                    a.classList.add('unmute');
+                }else{
+                    a.classList.remove('unmute');
+                    a.classList.add('mute');
+                }
+                console.log(a.classList);
+            }
+            a.addEventListener('click',action,false);
+        </script>
+    </body>
+</html>
