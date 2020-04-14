@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>购物车</title>
+        <link rel="stylesheet" href="shopping.css">
+    </head>
+    <body>
+        <div class="box">
+            <div>
+                <div class="title">
+                    <div style="width: 130px" class="allcheck"><input type="checkbox">全选</div>
+                    <div style="width:400px ">商品信息</div>
+                    <div style="width:150px ">单位(元)</div>
+                    <div style="width: 150px">数量</div>
+                    <div style="width:150px ">金额(元)</div>
+                    <div style="width: 80px;" >操作</div>
+                </div>
+
+                <div class="goods_list">
+                    <div style="width:60px;margin-left: 20px"><input class="choose" type="checkbox"></div>
+                    <div style="width:470px">
+                        <img src="3.jpg" alt="" width="100px" height="50px">
+                        <p style="display:block;float: left;margin-left: 5px;font-size: 16px">lol/星之守护者-幸德拉</p>
+                    </div>
+                    <div class="unit" style="width:150px ">99.00</div>
+                    <div style="width: 150px">
+                        <p class="Reduce" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">-</p>
+                        <input class="unum" style="margin-left:5px;margin-top:45px;text-align: center; width: 30px;height: 10px;float: left;line-height: 100px " type="text" value="1">
+                        <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
+                    </div>
+                    <div class="u-price" style="width:150px;font-weight: 700">99.00</div>
+                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                </div>
+
+                <div class="goods_list">
+                    <div style="width:60px;margin-left: 20px"><input class="choose" type="checkbox"></div>
+                    <div style="width:470px">
+                        <img src="4.jpg" alt="" width="100px" height="50px">
+                        <p style="display:block;float: left;margin-left: 5px;font-size: 16px">lol/大元素使-拉克丝</p>
+                    </div>
+                    <div class="unit" style="width:150px ">199.00</div>
+                    <div style="width: 150px">
+                        <p class="Reduce" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">-</p>
+                        <input class="unum" style="margin-left:5px;margin-top:45px;text-align: center; width: 30px;height: 10px;float: left;line-height: 100px " type="text" value="1">
+                        <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
+                    </div>
+                    <div class="u-price" style="width:150px;font-weight: 700">199.00</div>
+                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                </div>
+
+                <div class="goods_list">
+                    <div style="width:60px;margin-left: 20px"><input class="choose" type="checkbox"></div>
+                    <div style="width:470px">
+                        <img src="5.jpg" alt="" width="100px" height="50px">
+                        <p style="display:block;float: left;margin-left: 5px;font-size: 16px">lol/kda-阿狸</p>
+                    </div>
+                    <div class="unit" style="width:150px ">69.00</div>
+                    <div style="width: 150px">
+                        <p class="Reduce" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">-</p>
+                        <input class="unum" style="margin-left:5px;margin-top:45px;text-align: center; width: 30px;height: 10px;float: left;line-height: 100px " type="text" value="1">
+                        <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
+                    </div>
+                    <div class="u-price" style="width:150px;font-weight: 700">69.00</div>
+                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                </div>
+
+                <div class="goods_list">
+                    <div style="width:60px;margin-left: 20px"><input class="choose" type="checkbox"></div>
+                    <div style="width:470px">
+                        <img src="6.jpg" alt="" width="100px" height="50px">
+                        <p style="display:block;float: left;margin-left: 5px;font-size: 16px">lol/星之守护者-厄运小姐</p>
+                    </div>
+                    <div class="unit" style="width:150px ">99.00</div>
+                    <div style="width: 150px">
+                        <p class="Reduce" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">-</p>
+                        <input class="unum" style="margin-left:5px;margin-top:45px;text-align: center; width: 30px;height: 10px;float: left;line-height: 100px " type="text" value="1">
+                        <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
+                    </div>
+                    <div class="u-price" style="width:150px;font-weight: 700">99.00</div>
+                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                </div>
+
+            <div class="final">
+                <div style="margin-left: 20px;"><input type="checkbox">全选</div>
+                <div style="margin-left: 10px;cursor: pointer">删除</div>
+                <div style="margin-left: 630px">
+                    <p style="display: block;float: left;">以选择商品</p>
+                   <p style="display: block;float: left;font-weight: 700">0</p>
+                    <p  style="display: block;float: left;">件</p>
+                </div>
+                <div style="margin-left: 30px">
+                    <p  style="display: block;float: left;">合计:¥</p>
+                    <p  style="display: block;float: left;">0.00</p>
+                </div>
+                <div style="width: 100px; height: 40px;background-color: blue;text-align: center;color: #fff;margin-top: 10px;line-height: 40px;margin-left: 20px;
+                cursor: pointer">结算</div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script src="shopping.js"></script>
+</html>
