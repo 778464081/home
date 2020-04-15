@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>滚</title>
+        <style type="text/css">
+            .wrapper { border: 1px solid blue ; width : 80% ; margin: 50px auto ;}
+            .wrapper marquee {  border: 1px solid red ; height: 100px ; }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <!-- 在 HTML 5 中已经不再赞成使用 marquee 标签 -->
+            <marquee direction="left" behavior="scroll">武汉归来</marquee>
+        </div>
+        <div class="wrapper">
+            <!-- direction 属性用于控制滚动方向 ( 向哪里滚 ) ，这个方向可以是 left 、right 、up 、down -->
+            <marquee direction="right" behavior="slide" >武汉归来</marquee>
+        </div>
+        <div class="wrapper">
+            <!-- behavior 属性用于控制滚动方式，取值可以是 scroll 、slide 、alternate-->
+            <marquee direction="up" behavior="alternate" >武汉归来</marquee>
+        </div>
+        <div class="wrapper">
+            <marquee direction="down" behavior="alternate" >武汉归来</marquee>
+        </div>
+        
+    </body>
+</html>

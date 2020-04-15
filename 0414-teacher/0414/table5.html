@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格</title>
+        <style type="text/css">
+            .tab {
+                border: 1px solid blue ; /* 仅仅设置表格外部边框 */
+                margin: auto ;
+            }
+
+            .tab tr td {
+                border: 1px solid red ; /* 仅仅设置单元格的边框 */
+                height: 100px ;
+                width: 200px ;
+                text-align : right; /* 用于设置单元格中内容的水平排列方式 ( left 、center 、right ) */
+                /* 注意 ，对于 单元格 来说，可以使用 vertical-align 设置内容的垂直对齐方式 */
+                vertical-align : top; /* 用于设置单元格中内容的垂直排列方式 ( top 、middle 、bottom ) */
+            }
+        </style>
+    </head>
+    <body>
+
+       <table class="tab">
+           <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+
+           <tr>
+               <td></td>
+               <td>这里</td>
+               <td></td>
+               <td></td>
+           </tr>
+
+           <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+
+       </table>
+
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格</title>
+    </head>
+    <body>
+
+        <!-- 当 cellspacing 为 0 时相邻的单元格之间的边框将紧挨在一起 -->
+       <table border="5" cellspacing="0" width="800px" align="center">
+           <tr>
+               <td height="50"></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+
+           <tr>
+               <td height="50"></td>
+               <td>这里</td>
+               <td></td>
+               <td></td>
+           </tr>
+
+           <tr>
+               <td height="50"></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+       </table>
+
+        <hr>
+
+        <!-- 使表格边框为 零 ，使单元格间距为 1 像素，设置整个表格的背景颜色，并设置每个单元格的背景颜色 -->
+        <table border="0" cellspacing="1" width="800px" align="center" bgcolor="orange" >
+            <tr>
+                <td height="50" bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+            </tr>
+
+            <tr>
+                <td height="50" bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+            </tr>
+
+            <tr>
+                <td height="50" bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+                <td bgcolor="white"></td>
+            </tr>
+        </table>
+
+        <style type="text/css">
+            .tab {
+                border: 1px solid blue ;
+                /* separate 表示不合并相邻单元格的边框 */
+                border-collapse : collapse ; /* collapse 表示合并相邻单元格的边框 */
+                margin: 50px auto ;
+            }
+            .tab tr {
+
+            }
+            .tab tr td {
+                border: 1px solid ;
+                width: 150px ;
+                height: 50px ;
+                text-align: center ;
+                vertical-align: middle ;
+            }
+
+            .tab tr td:before {
+                content: "hello" ;
+            }
+
+        </style>
+
+        <table class="tab">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </body>
+</html>

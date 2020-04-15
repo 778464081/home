@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格</title>
+    </head>
+    <body>
+
+        <h3 align="center">使用HTML标记和属性实现表格</h3>
+
+        <table border="10" bordercolor="red" width="80%" align="center" bgcolor="yellow">
+
+            <!-- table row 表格行 -->
+            <tr>
+                <!-- table data cell 表格数据单元格 -->
+                <td width="30%" height="40px">张三丰</td>
+                <td width="10%" height="40px">男</td>
+                <td width="10%" height="40px">100</td>
+                <td width="50%" height="40px">武当山</td>
+            </tr>
+
+            <tr bgcolor="orange" >
+                <!-- table data cell 表格数据单元格 -->
+                <td width="30%" height="50px">张三丰</td>
+                <td width="10%" height="50px">男</td>
+                <td width="10%" height="50px">100</td>
+                <td width="50%" height="50px">武当山</td>
+            </tr>
+
+            <!-- table row 表格行 -->
+            <tr>
+                <!-- table data cell 表格数据单元格 -->
+                <td width="30%" height="20px">张三丰</td>
+                <td width="10%" height="20px">男</td>
+                <td width="10%" height="20px">100</td>
+                <td width="50%" height="20px">武当山</td>
+            </tr>
+
+            <tr bgcolor="orange" >
+                <!-- table data cell 表格数据单元格 -->
+                <td width="30%" height="40px">张三丰</td>
+                <td width="10%" height="30px">男</td>
+                <td width="10%" height="50px">100</td>
+                <td width="50%" height="20px">武当山</td>
+            </tr>
+
+        </table>
+
+        <ul>
+            <li>
+                <span>table 表示表格</span>
+                <ul>
+                    <li> border 属性用于设置 表格的边框 的 粗细</li>
+                    <li> bordercolor 属性用于设置表格边框的颜色</li>
+                    <li> align 属性用于控制表格本身的位置 ( 水平排列方式 : left 、center 、right )</li>
+                    <li> width 属性用于控制表格的宽度  ( 可以使用 百分比 或 像素 )</li>
+                    <li> bgcolor 属性用于设置 整个表格 的 背景颜色</li>
+                </ul>
+            </li>
+            <li>
+                <span>tr : table row ，表格行</span>
+                <ul>
+                    <li> bgcolor 属性用于设置 表格行中的每个单元格的 背景颜色</li>
+                </ul>
+            </li>
+            <li>
+                <span>td : table data cell ，表示表格行中的单元格</span>
+                <ul>
+                    <li> 当 table 元素的 border 不为 0 时单元格的边框也会显示 </li>
+                    <li> 当 table 元素的 bordercolor 属性指定了表格边框的颜色时，单元格的边框颜色也与其相同 </li>
+                    <li> width 属性用于控制单元格的宽度 ( 可以使用 百分比 或 像素 ) </li>
+                    <li> height 属性用于控制单元格的高度 ( 可以使用 百分比 或 像素 ) ( 同一行以最高的为准 )</li>
+                    <li> bgcolor 属性用于设置 单个单元格的 背景颜色</li>
+                </ul>
+            </li>
+        </ul>
+        
+    </body>
+</html>
