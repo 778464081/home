@@ -4,12 +4,13 @@
         <meta charset="UTF-8">
         <title>购物车</title>
         <link rel="stylesheet" href="shopping.css">
+
     </head>
     <body>
         <div class="box">
             <div>
                 <div class="title">
-                    <div style="width: 130px" class="allcheck"><input type="checkbox">全选</div>
+                    <div style="width: 130px" class="allcheck"><input class="choose_all" type="checkbox">全选</div>
                     <div style="width:400px ">商品信息</div>
                     <div style="width:150px ">单位(元)</div>
                     <div style="width: 150px">数量</div>
@@ -30,7 +31,7 @@
                         <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
                     </div>
                     <div class="u-price" style="width:150px;font-weight: 700">99.00</div>
-                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                    <div class="del" style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
                 </div>
 
                 <div class="goods_list">
@@ -46,7 +47,7 @@
                         <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
                     </div>
                     <div class="u-price" style="width:150px;font-weight: 700">199.00</div>
-                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                    <div class="del" style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
                 </div>
 
                 <div class="goods_list">
@@ -62,7 +63,7 @@
                         <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
                     </div>
                     <div class="u-price" style="width:150px;font-weight: 700">69.00</div>
-                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                    <div class="del" style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
                 </div>
 
                 <div class="goods_list">
@@ -78,20 +79,20 @@
                         <p class="Increase" style="display:block;float: left;margin-left: 5px;font-size: 16px;cursor: pointer">+</p>
                     </div>
                     <div class="u-price" style="width:150px;font-weight: 700">99.00</div>
-                    <div style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
+                    <div class="del" style="width: 80px;font-size: 20px;cursor: pointer" >×</div>
                 </div>
 
-            <div class="final">
-                <div style="margin-left: 20px;"><input type="checkbox">全选</div>
-                <div style="margin-left: 10px;cursor: pointer">删除</div>
-                <div style="margin-left: 630px">
+                <div class="final">
+                <div style="margin-left: 20px;"><input class="choose_all" type="checkbox">全选</div>
+                <div class="C_del" style="margin-left: 10px;cursor: pointer">删除选中商品 </div>
+                <div style="margin-left: 570px">
                     <p style="display: block;float: left;">以选择商品</p>
-                   <p style="display: block;float: left;font-weight: 700">0</p>
+                   <p class="t-num" style="display: block;float: left;font-weight: 700">0</p>
                     <p  style="display: block;float: left;">件</p>
                 </div>
-                <div style="margin-left: 30px">
+                <div>
                     <p  style="display: block;float: left;">合计:¥</p>
-                    <p  style="display: block;float: left;">0.00</p>
+                    <p class="t-price" style="display: block;float: left;">0.00</p>
                 </div>
                 <div style="width: 100px; height: 40px;background-color: blue;text-align: center;color: #fff;margin-top: 10px;line-height: 40px;margin-left: 20px;
                 cursor: pointer">结算</div>

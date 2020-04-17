@@ -2,7 +2,11 @@
 let add = document.querySelectorAll('.Increase');
 let reduce = document.querySelectorAll('.Reduce');
 let numIpt = document.querySelectorAll('.unum');
-
+let goods_list = document.querySelectorAll('.goods_list');
+let choose = document.querySelectorAll('.choose');
+let choose_all = document.querySelectorAll(".choose_all");
+let del =document.querySelectorAll('.del');
+let C_del=document.querySelector('.C_del');
 // 数量点击事件
     // 商品增加
     for (let i =0;i<add.length;i++){
@@ -27,6 +31,54 @@ let numIpt = document.querySelectorAll('.unum');
                numChange(this,'cursor')
             }
     }
+  
+
+ //每行单选被选中，结算
+
+ for(let i=0;i<choose.length;i++){
+     choose[i].onclick = function(){
+         getTotal();
+     }
+
+ }
+
+ //全选
+ for(let i=0; i<choose_all.length;i++){
+     choose_all[i].onclick = function(){
+         for(let i=0;i<goods_list.length;i++){
+             let check = goods_list[i].querySelector(".choose");
+             check.checked = this.checked;           
+         }
+         choose_all[0].checked = choose_all[1].checked = this.checked;
+         getTotal();
+     }
+ }
+
+
+ //删除这一行
+ for(let i =0;i<del.length;i++){
+     del[i].onclick = function(event){
+         event.preventDefault(); //阻止默认事件
+         let tr = this.parentNode;
+         tr.parentNode.removeChild(tr);
+         getTotal();
+     }
+ }
+
+ //删除选中商品
+C_del.onclick = function(){
+    goods_list=document.querySelectorAll('.goods_list');
+
+    //找到被选中的行
+    for(let i =0;i<goods_list.length;i++){
+        let check = goods_list[i].querySelector('.choose');
+        if(check.checked){
+            goods_list[i].parentNode.removeChild(goods_list[i]);
+         }
+    }
+    getTotal();
+}
+
 /*
 * 数量变化函数
 * @param{Object} dom  被点击的节点
@@ -66,6 +118,57 @@ let numIpt = document.querySelectorAll('.unum');
      //计算总价格
      let choose = goods_list.querySelector('.choose');  //选中checkbox
      choose.checked = true ;
+     //总计
+     getTotal();
  }
+//总计功能
+ function getTotal(){
 
- //53.39
+    //1.设置总价格
+     let total = 0;
+     goods_list=document.querySelectorAll('.goods_list');  //该题神来之笔
+
+     //找到被选中的行
+     for(let i =0;i<goods_list.length;i++){
+        let check=goods_list[i].querySelector(".choose"); 
+        if(check.checked){
+            let smTot = goods_list[i].querySelector('.u-price').innerHTML;
+            smTot =Number(smTot);
+            total=total+smTot;
+             
+         }
+     }
+    
+    //找到总计，并且放入
+    let tprice = document.querySelector('.t-price');
+    tprice.innerHTML = total.toFixed(2);
+
+    // 2.判断是否全选
+    let isAllCheck =true;
+    for(let i=0;i<goods_list.length;i++){
+        let check=goods_list[i].querySelector(".choose");
+        if(!check.checked){// 一旦没被选中
+            isAllCheck = false;
+            break;
+        }
+    }
+    if(!goods_list.length){
+        isAllCheck = false;
+    }
+    choose_all[0].checked = choose_all[1].checked = isAllCheck;
+
+
+    //计算总商品的个数
+    let allNum = 0;
+    for(let i =0;i<goods_list.length;i++){
+        let check=goods_list[i].querySelector(".choose"); 
+        if(check.checked){
+            let smTot = goods_list[i].querySelector('.unum').value;
+            smTot =Number(smTot);
+            allNum=allNum+smTot; 
+         }
+     }
+     document.querySelector('.t-num').innerHTML = allNum;
+     
+    
+ }  
