@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .container { display: flex ; width: 800px ; border: 2px solid blue ; margin: 25px auto ; }
+            /* 亲子选择器 */
+            .container>.item { width: 25% ; height: 50px ; box-shadow: 0 0 5px 4px red inset ; }
+
+            /* 并列选择器 */
+            .first.container {
+                height: 100px ; 
+                flex-flow: row nowrap ;
+                justify-content: flex-start ; /* 项目 位于 容器 的 开头  */
+            }
+
+            .second.container {
+                height: 100px ; 
+                flex-flow: row nowrap ;
+                justify-content: flex-end ; /* 项目 位于 容器 的 结尾  */
+            }
+
+            .third.container {
+                height: 100px ; 
+                flex-flow: row nowrap ;
+                justify-content: center ; /* 项目 位于 容器 的 中心  */
+            }
+
+            .fourth.container {
+                height: 100px ; 
+                flex-flow: row nowrap ;
+                justify-content: space-between ;/* 项目位于各行之间留有空白的容器内*/ 
+            }
+
+            .fifth.container {
+                height: 100px ; 
+                flex-flow: row nowrap ;
+                justify-content: space-around ; /* 项目位于各行之前、之间、之后都留有空白的容器内  */
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container second">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container third">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container fourth">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container fifth">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+    </body>
+
+</html>

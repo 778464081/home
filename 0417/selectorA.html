@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>选择器</title>
+
+        <style type="text/css">
+            * { margin: 15px ; border: 1px solid blue ; }
+
+            /* 并列 :  既要是 div 元素，而且 div 元素的 class 中还必须包含 outer */
+            div.outer { border-color : red ; border-width: 5px ; }
+
+            /* 后代选择器 : 选择 .outer 元素内部所有的 div 子元素 ( 可以是直接子元素，也可以是间接子元素 ) */
+            .outer div { border-color : green ; border-width: 2px  }
+
+            /* 亲子选择器 : */
+            .outer>p { border-color : gold ; border-width: 2px }
+
+            /* 相邻兄弟选择器 */
+            .hong-shao-rou + * {
+                border-color: green ; 
+                border-width: 5px ;
+            }
+
+            /* 兄弟选择器 ( 比自己"小"的所有弟弟 ) */
+            .hong-shao-rou ~ * {
+                background-color: #ffff00 ;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="outer">
+
+            <div class="wrapper">
+                <div class="inner"></div>
+                <div class="inner"></div>
+            </div>
+
+            <p class="wrapper">
+                <span class="inner"></span>
+                <span class="inner"></span>
+            </p>
+
+            <div class="wrapper">
+                <p class="inner"></p>
+                <p class="inner"></p>
+            </div>
+
+        </div>
+
+        <ul>
+            <li>麻婆豆腐</li>
+            <li class="hong-shao-rou">红烧肉</li>
+            <li>回锅肉</li>
+            <li>藜蒿炒腊肉</li>
+            <li>盐煎肉</li>
+            <li>老婆饼(有饼没老婆)</li>
+        </ul>
+
+        <div>
+            <div>麻婆豆腐</div>
+            <div class="hong-shao-rou">红烧肉</div>
+            <div>回锅肉</div>
+            <div>藜蒿炒腊肉</div>
+            <div>盐煎肉</div>
+            <div>老婆饼(有饼没老婆)</div>
+        </div>
+
+    </body>
+
+</html>

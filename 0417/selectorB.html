@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>选择器</title>
+
+        <style type="text/css">
+        
+            /*
+            .container { width: 800px ; height: 200px ; margin: 25px auto ; border: 1px solid blue ; }
+            .wrapper { width: 800px ; height: 200px ; margin: 25px auto ; border: 1px solid blue ; }
+            .outer { width: 800px ; height: 200px ; margin: 25px auto ; border: 1px solid blue ; }
+            */
+
+            /* 分组选择器 ( 群组选择器 ) ( 不要再使用 "并列选择器" 称呼 选择器分组 )*/
+            .container , 
+            .wrapper , 
+            .outer { 
+                width: 800px ; height: 200px ; margin: 25px auto ; border: 1px solid blue ; 
+            }
+
+            /* 伪元素选择器 */
+            .wrapper::before { content: '' ; display: block ; height: 100px ; width: 100px ; background: red ; }
+            .wrapper::after { content: '' ; display: block ; height: 100px ; width: 100px ; background: gold ; }
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container"></div>
+
+        <div class="wrapper"></div>
+
+        <div class="outer"></div>
+
+    </body>
+
+</html>

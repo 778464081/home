@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .wrapper {
+                width: 80%;
+                height: 200px;
+                margin: 100px auto;
+                border: 1px solid blue;
+                display: flex ;/* 采用弹性布局 */
+            }
+
+            .wrapper>.item {  height: 50px;  width: 25%; }
+
+            .odd { background: #dedede; }
+            .even {  background: #ffff00; }
+
+            .first {
+                /* flex-direction 属性决定 主轴( main axis ) 的方向( 也就是容器内各个项目的排列方向 ) */
+                flex-direction: row; /* 以水平方向为主轴 ，以左侧为起点 */
+            }
+
+            .second {
+                flex-direction: row-reverse ; /* 以水平方向为主轴 ，以右侧为起点 */
+            }
+
+            .third {
+                flex-direction: column ; /* 以垂直方向为主轴 ，以顶部为起点 */
+            }
+
+            .fourth {
+                flex-direction: column-reverse ; /* 以垂直方向为主轴 ，以底部为起点 */
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <h3> flex-direction: row | row-reverse | column | column-reverse  ;</h3>
+
+        <!-- 采用 flex 或 inline-flex 布局的元素被称作 【 Flex 容器 ( Flex Container ) 】  -->
+        <div class="wrapper first">
+            <!-- 处于 flex 或 inline-flex 布局元素内部的子元素 被称作 Flex 项目 ( Flex item )-->
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item odd">5</div>
+            <div class="item even">6</div>
+        </div>
+
+        <div class="wrapper second">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item odd">5</div>
+            <div class="item even">6</div>
+        </div>
+
+        <div class="wrapper third">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item odd">5</div>
+            <div class="item even">6</div>
+        </div>
+
+        <div class="wrapper fourth">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item odd">5</div>
+            <div class="item even">6</div>
+        </div>
+
+    </body>
+
+</html>

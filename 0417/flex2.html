@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+        <style type="text/css">
+
+            h3 { text-align: center ; }
+
+            .odd {  background: #dedede; }
+            .even { background: #ffff00; }
+
+            .container {
+                width: 80%;
+                height: 100px;
+                margin: 100px auto;
+                border: 1px solid blue;
+                display: flex ;/* 采用 弹性布局 */
+            }
+
+            .container>.item { height: 50px; width: 25%; }
+
+            /* 并联选择器 ( 如果某些元素的 class 属性取值中既包含 first 又 包含 container 就可以使用 .first.container 来选择他们 ) */
+            .first.container { /* 一定要注意两个选择器之间没有任何空白 */
+                flex-direction: row ;
+                flex-wrap: nowrap ; /* nowrap 表示不换行 */
+            }
+
+            .second.container { /* 一定要注意两个选择器之间没有任何空白 */
+                flex-direction: row ;
+                flex-wrap: wrap ; /* wrap 表示换行，第一行在上换行后的内容在下 */
+            }
+
+            .third.container { /* 一定要注意两个选择器之间没有任何空白 */
+                flex-direction: row ;
+                flex-wrap: wrap-reverse ; /* wrap-reverse 表示换行，第一行在下换行后的内容在上 */
+            }
+
+            .fourth.container {   flex-direction: column ; flex-wrap:nowrap ; }
+            .fifth.container {   flex-direction: column ; flex-wrap:wrap ; }
+            .sixth.container {   flex-direction: column ; flex-wrap:wrap-reverse ; }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h3> flex-wrap : nowrap | wrap | wrap-reverse ;</h3>
+
+        <div class="container first">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item odd">5</div>
+            <div class="item even">6</div>
+        </div>
+
+        <div class="container second">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item even">5</div>
+            <div class="item odd">6</div>
+        </div>
+
+        <div class="container third">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item even">5</div>
+            <div class="item odd">6</div>
+        </div>
+
+        <div class="container fourth">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item even">5</div>
+            <div class="item odd">6</div>
+        </div>
+
+        <div class="container fifth">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item even">5</div>
+            <div class="item odd">6</div>
+        </div>
+
+        <div class="container sixth">
+            <div class="item odd">1</div>
+            <div class="item even">2</div>
+            <div class="item odd">3</div>
+            <div class="item even">4</div>
+            <div class="item even">5</div>
+            <div class="item odd">6</div>
+        </div>
+
+    </body>
+
+</html>

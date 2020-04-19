@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+        <style type="text/css">
+            h3 { text-align: center ; }
+            .odd {  background: #dedede; }
+            .even { background: #ffff00; }
+
+            .container { display: flex ; width: 800px ; height: 200px ; border: 2px solid blue ; margin: 25px auto ; }
+            /* 亲子选择器 */
+            .container>.item { width: 25% ; height: 50px ; }
+
+            /* 并列选择器 ( 即 class 属性中即包含 first 又 包含 container )  */
+            div.first.container {
+                /* flex-flow: flex-direction flex-wrap ; */
+                flex-flow: row  nowrap ;
+            }
+
+            div.second.container { flex-flow: row  wrap ; }
+            div.third.container { flex-flow: row  wrap-reverse ; }
+            div.fourth.container { flex-flow: column  nowrap ; }
+            div.fifth.container { flex-flow: column  wrap ; }
+            div.sixth.container { flex-flow: column  wrap-reverse ; }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h3>flex-flow : &lt;flex-direction&gt;  &lt;flex-wrap&gt; </h3>
+
+        <div class="container first">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+
+        <div class="container second">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+        <div class="container third">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+        <div class="container fourth">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+        <div class="container fifth">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+        <div class="container sixth">
+            <span class="item odd">1</span>
+            <span class="item even">2</span>
+            <span class="item odd">3</span>
+            <span class="item even">4</span>
+            <span class="item odd">5</span>
+            <span class="item even">6</span>
+            <span class="item odd">7</span>
+        </div>
+
+    </body>
+
+</html>
