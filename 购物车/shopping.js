@@ -89,7 +89,7 @@ C_del.onclick = function(){
      let text = amount.querySelector('.unum');
      let num =text.value;
 
-     /* 判断添加与减少*/
+     /* 判断添加与减少or手动修改*/
      if (act=="add"){
          num++;
 
@@ -169,6 +169,4 @@ C_del.onclick = function(){
          }
      }
      document.querySelector('.t-num').innerHTML = allNum;
-     
-    
  }  
