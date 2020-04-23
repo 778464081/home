@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+        <style type="text/css">
+            .container { 
+                display: flex ; 
+                flex-flow: row nowrap ; 
+                justify-content: space-between ;
+                width: 800px ; height: 200px ; border: 2px solid blue ; margin: 25px auto ;
+            }
+            .container>.item { width: 15% ; text-align: center ; background: orange ;  }
+            .container>.a { height: 100px ; line-height: 100px ; }
+            .container>.b { height: 120px ; line-height: 120px ; }
+            .container>.c { height: 180px ; line-height: 180px ; }
+            .container>.d { height: 50px ; line-height: 50px ; }
+            .container>.e { height: 70px ; line-height: 70px ; }
+
+            .first.container {
+                align-items : flex-start ;
+            }
+
+            .second.container {
+                align-items : center ;
+            }
+
+            .third.container {
+                align-items : flex-end ;
+            }
+
+            .fourth.container {
+                align-items : baseline ;
+            }
+
+            .fifth.container {
+                height: 100px ; /* 用来调整Flex容器的高度*/
+                align-items: stretch ; /* stretch 表示 Flex容器内部的子元素如果没有显式设置高度，则被拉伸为跟 Flex 容器一样高  */
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <span class="item a">1</span>
+            <span class="item b">2</span>
+            <span class="item c">3</span>
+            <span class="item d">4</span>
+            <span class="item e">5</span>
+        </div>
+
+        <div class="container second">
+            <span class="item a">1</span>
+            <span class="item b">2</span>
+            <span class="item c">3</span>
+            <span class="item d">4</span>
+            <span class="item e">5</span>
+        </div>
+
+        <div class="container third">
+            <span class="item a">1</span>
+            <span class="item b">2</span>
+            <span class="item c">3</span>
+            <span class="item d">4</span>
+            <span class="item e">5</span>
+        </div>
+
+        <div class="container fourth">
+            <span class="item a">hello</span>
+            <span class="item b">google</span>
+            <span class="item c">com</span>
+            <span class="item d">tomcat</span>
+            <span class="item e">jetty</span>
+        </div>
+
+        <div class="container fifth">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+        </div>
+
+    </body>
+
+</html>

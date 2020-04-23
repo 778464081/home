@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex项目</title>
+
+        <style type="text/css">
+
+            .container { display: flex ; width: 800px ; height: 400px ; margin: 50px auto ; border: 2px solid blue ; }
+
+            .first.container { 
+                flex-flow: row nowrap ; /* 指定 主轴方向 和 折行/折列方式*/
+                align-content: stretch ; /* 如果子元素没有显式设置宽度或高度，并且在交叉轴上存在尚未占满的空间，就将子元素拉伸*/
+                align-items: center ;
+            }
+            .first.container .one { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 200px ; 
+                height: 300px ;
+                background : #ffff00 ;
+                align-self: auto ; /* auto 表示继承 Flex 容器中 align-items 属性的取值 */
+            }
+            .first.container .two { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 300px ; 
+                height: 100px ;
+                background : #dedede ;
+                align-self: auto ; /* auto 表示继承 Flex 容器中 align-items 属性的取值 */
+            }
+            .first.container .three { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 100px ; 
+                height: 200px ;
+                background : #ffff00 ;
+                align-self: flex-end ; /* 覆盖 Flex 容器中 align-items 属性的取值 */
+            }
+
+            /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+            .second.container { 
+                flex-flow: column nowrap ; /* 指定 主轴方向 和 折行/折列方式*/
+                align-items: center ; /* Flex容器内部的 Flex 项目 在 交叉轴上居中 ( center ) 排列 */
+            }
+            .second.container .one { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 200px ;
+                height: 50px ;
+                background : #ffff00 ;
+                align-self: auto ; /* auto 表示继承 Flex 容器中 align-items 属性的取值 */
+            }
+            .second.container .two { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 300px ; 
+                height: 80px ;
+                background : #dedede ;
+                align-self: auto ; /* auto 表示继承 Flex 容器中 align-items 属性的取值 */
+            }
+            .second.container .three { 
+                flex : auto ; /* flex-grow : 1 ; flex-shrink : 1 ; flex-basis : auto ; */
+                width: 100px ; 
+                height: 70px ;
+                background : #ffff00 ;
+                align-self: flex-end;  /* 覆盖 Flex 容器中 align-items 属性的取值 */
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <span class="item one">天字一号</span>
+            <span class="item two">天子二号</span>
+            <span class="item three">天子三号</span>
+        </div>
+
+        <div class="container second">
+            <span class="item one">地子一号</span>
+            <span class="item two">地子二号</span>
+            <span class="item three">地子三号</span>
+        </div>
+
+    </body>
+
+</html>

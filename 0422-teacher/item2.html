@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex项目</title>
+
+        <style type="text/css">
+
+            .container { display: flex ; width: 800px ; height: 100px ; margin: 50px auto ; border: 2px solid blue ; }
+
+            .first.container { flex-flow: row nowrap ; align-content: stretch ; }
+            .first.container  .one { flex-shrink : 0 ; width: 400px ; background: gold ; }
+            .first.container  .two { flex-shrink : 0 ; width: 400px ; background: #dedede ; }
+            .first.container  .three { flex-shrink : 0 ; width: 200px ; background: #ffff00 ; }
+
+            .second.container { flex-flow: row nowrap ; align-content: stretch ; }
+            .second.container  .one { flex-shrink : 1 ; width: 400px ; background: gold ; }
+            .second.container  .two { flex-shrink : 1 ; width: 400px ; background: #dedede ;}
+            .second.container  .three { flex-shrink : 1 ; width: 200px ; background: #ffff00 ; }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <span class="item one"></span>
+            <span class="item two"></span>
+            <span class="item three"></span>
+        </div>
+
+        <div class="container second">
+            <span class="item one"></span>
+            <span class="item two"></span>
+            <span class="item three"></span>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex项目</title>
+
+        <style type="text/css">
+
+            .container { display: flex ; width: 800px ; height: 100px ; margin: 50px auto ; border: 2px solid blue ; }
+
+            .first.container { flex-flow: row nowrap ; align-content: stretch ; }
+            /* flex : flex-grow  flex-shrink flex-basis 如果取值是 auto 则表示 1  1  auto */
+            .first.container .one { flex : auto ; width: 200px ; order : 250 ; background : #dedede ; border: 2px solid #ffff00 ; }
+            .first.container .two { flex : auto ; width: 300px ; order: -250 ; background : #dedede ; border: 2px solid #ffff00 ;}
+            .first.container .three { flex : auto ; width: 100px ; order: 0 ; background : #dedede ; border: 2px solid #ffff00 ; }
+
+            /* align-content: stretch ; 表示当 交叉轴 上存在尚未沾满的空间时，就拉伸没有显式指定 宽度或高度的 Flex项目 */
+            .second.container { flex-flow: column nowrap ; align-content: stretch ; height: 300px ; }
+            /* flex : flex-grow  flex-shrink flex-basis 如果取值是 auto 则表示 1  1  auto */
+            .second.container .one { flex : auto ; height: 50px ; order : 250 ; background : #dedede ; border: 2px solid #ffff00 ; }
+            .second.container .two { flex : auto ; height: 80px ; order: -250 ; background : #dedede ; border: 2px solid #ffff00 ;}
+            .second.container .three { flex : auto ; height: 70px ; order: 0 ; background : #dedede ; border: 2px solid #ffff00 ; }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <span class="item one">天字一号</span>
+            <span class="item two">天子二号</span>
+            <span class="item three">地子一号</span>
+        </div>
+
+        <div class="container second">
+            <span class="item one">天字一号</span>
+            <span class="item two">天子二号</span>
+            <span class="item three">地子一号</span>
+        </div>
+
+    </body>
+
+</html>

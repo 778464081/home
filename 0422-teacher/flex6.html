@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弹性布局</title>
+
+        <style type="text/css">
+            .container { 
+                display: flex ; 
+                flex-flow: row wrap ; /* row 表示主轴为水平方向从左向右 ；wrap 表示折行 */
+                width: 800px ; 
+                height: 200px ; 
+                border: 2px solid blue ; 
+                margin: 25px auto ;
+            }
+
+            .container>.item { 
+                width: 24% ; 
+                background: orange ;
+                border-right: 2px solid yellow ;
+                border-bottom: 2px solid yellow ;
+            }
+
+            .first.container { align-content : flex-start ; }
+            .second.container { align-content : center ; }
+            .third.container { align-content : flex-end ; }
+            .fourth.container { align-content : stretch ; }
+            .fifth.container { align-content : space-around ; }
+            .sixth.container { align-content : space-between ; }
+        </style>
+        
+    </head>
+
+    <body>
+
+        <div class="container first">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+        <div class="container second">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+        <div class="container third">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+        <div class="container fourth">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+        <div class="container fifth">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+        <div class="container sixth">
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+            <span class="item">7</span>
+        </div>
+
+    </body>
+
+</html>
