@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fixed + flex</title>
+
+        <style type="text/css">
+            body { margin: 0 ; padding : 0 ; }
+            .odd , .even { height: 100px ; line-height: 100px ; text-align: center ; font-size: 50px ; }
+            .odd { background: #dedede ; }
+            .even { background: #ffff00 ; }
+
+            .wrapper {
+                position: fixed ;
+                left: 0 ;
+                bottom : 0 ;
+                width: 100% ;
+                border: 2px solid blue ;
+            }
+
+            .wrapper .container { 
+                display: flex ; 
+                flex-flow: row nowrap ; 
+                align-items: stretch ; 
+                height: 80px ; 
+                width: 800px ; 
+                margin: auto ; 
+                background: #fafafa ;
+            }
+            .wrapper .container .item { 
+                flex: 1 1 200px ; 
+                box-shadow: 0 0 0 1px red inset ;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+        ( function(){
+            // 找到页面上的 body 元素
+            let b = document.querySelector( "body" ) ;
+            // 循环 50 次
+            for( let i = 0 ; i < 50 ; i++ ) {
+                // 创建一个新的 div 元素
+                let div = document.createElement( "div" );
+                // 为新创建的 div 元素指定 class name
+                div.classList.add( i % 2 == 0 ? "even" : "odd" ); // 三目运算符 ( ? : )
+                // 为新创建的 div 元素设置内容
+                div.innerHTML = i ;
+                // 将 div 追加到 b 对应的元素内部的末尾
+                b.appendChild( div ); 
+            }
+        } )();
+    </script> 
+
+</html>

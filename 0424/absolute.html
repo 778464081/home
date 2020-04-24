@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BFC</title>
+
+        <style type="text/css">
+            .wrapper { position: relative ; box-sizing: border-box ; width: 500px ; height: 500px ; margin : 50px auto ; border: 2px solid #ddd ; }
+            .wrapper .conatiner { 
+                box-sizing: border-box ; width: 450px ; height:150px ; border: 2px solid blue ; margin: 25px ; 
+            }
+
+            .wrapper .first {
+                position: absolute ;
+                left: 0 ;
+                bottom : 0 ;
+                z-index: 10 ;
+                background: rgb(163, 163, 255) ;
+            }
+
+            .wrapper .second {
+                position: absolute ;
+                left: 0 ;
+                bottom : 0 ;
+                z-index: 1 ;
+                background: rgb(255, 201, 252) ;
+            }
+
+            .wrapper .conatiner .box { 
+                position: absolute ;
+                left: 0 ;
+                top : 0 ;
+                z-index: -1 ;
+                box-sizing: border-box ; width: 400px ; height: 100px ; border: 2px solid red ; margin: 25px ;
+                background: rgb(255, 163, 163) ;
+            }
+            .wrapper .conatiner .box .content { 
+                position: absolute ;
+                left: 0 ;
+                top : 0 ;
+                z-index: -10 ;
+                box-sizing: border-box ; width: 350px ; height: 50px ; border: 2px solid green ; margin: 25px ;
+                background: rgb(163, 255, 163) ;
+            }
+
+            p { text-align: center ; font-size: 20px ; font-weight: bold ; }
+        </style>
+
+    </head>
+
+    <body>
+
+        <p>块格式化上下文包含创建它的元素内部的所有内容</p>
+
+        <div class="wrapper">
+
+            <div class="conatiner first">
+                <div class="box">
+                    <div class="content"></div>
+                </div>
+            </div>
+
+            <div class="conatiner second">
+                <div class="box">
+                    <div class="content"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
