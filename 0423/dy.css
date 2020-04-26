@@ -35,6 +35,7 @@ ul{
     list-style: none;
     display: flex;
     width: 680px;
+    align-items: center;
     justify-content: space-between;
 }
 li{
