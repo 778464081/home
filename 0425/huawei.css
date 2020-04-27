@@ -306,9 +306,366 @@ li span{
     float: left;
     width: 33.33333333%;
     height: 150px;
+    box-sizing: border-box;
 }
 .navigation-buckets .two{
     border-left:1px solid #d4d4d4 ;
     border-right:1px solid #d4d4d4 ;
 }
+
+.productor .img{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100px;
+    height: 94px;
+    float: left;
+}
+.productor>.title{
+     color: black;
+     float: left;
+      width: 180px;
+    height: 80px;
+    margin-top: 10px;
+}
+.productor h3{
+    font-size: 22px;
+}
+.productor p{
+    display: block;
+   margin-top: 10px;
+    font-size: 18px;
+    color: #666666;
+}
 /*图片之下 结束*/
+
+/*你的焦点 开始*/
+.product-callout{
+    display: block;
+    margin-bottom: 100px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    min-height: 641px;
+}
+.callout_left{
+    width: 60%;
+    float: left;
+    position: relative;
+}
+.callout_right{
+    width: 40%;
+    float: left;
+}
+.callout_left .cart-bg{
+    background: linear-gradient(to bottom right, #15b0e8, #59c8d5);
+    background-color: #15b0e8 \9;
+    height: 450px;
+    position: absolute;
+    left: -60%;
+    width: 140%;
+    top: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+.callout_left .cart-info{
+    padding-top: 100px;
+    padding-bottom: 120px;
+    position: static;
+    height: 450px;
+    width: 82%;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.cart-info .img{
+    position: absolute;
+    top: 50px;
+    right: 105px;
+    padding-bottom: 15px;
+    width: 264px;
+    transition: all 0.9s;
+}
+.img .first{
+    transition: all 0.5s;
+}
+.img .second{
+    margin-top: -50px;
+    transition: all 0.5s;
+}
+.cart-info .cart-text{
+    position: absolute;
+    top: 90px;
+    right: 380px;
+    width: 240px;
+    height: 330px;
+}
+.cart-text h3{
+    display: block;
+    margin: 28px 0 14px;
+    font-size: 28px;
+}
+.cart-text span{
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    font-size: 22px;
+}
+.cart-text small{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size:  9px;
+}
+ .img:hover .first{
+   transform: translateY(-20px);
+}
+.img:hover .second{
+    transform: translateY(20px);
+ }
+
+ .card{
+    background: #dde6ed;
+    border-radius: 5px;
+    display: block;
+    width: 450px;
+ }
+ .video_text{
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    min-height: 300px;
+ }
+ .video_text .category-name{
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin-bottom: 0;
+ }
+.content{
+    height: 220px;
+    overflow: hidden;
+}
+.content h2{
+    font-size: 38px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.content p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.video_text .liaojiegenduo{
+    margin-top: 50px;
+    font-size: 22px;
+}
+/*你的焦点 结束*/
+
+/*老头 医疗更暖心 开始*/
+.hero{
+    margin-bottom: 100px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+/*老头 医疗更暖心 结束*/
+
+/*展会中心 开始*/
+.image_text{
+    max-width: 1366px;
+    margin: 0 auto 100px;
+    position: relative;
+}
+.text_clearfix{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    margin-bottom: 60px;
+}
+.text_clearfix h2{
+    display: block;
+    float: left;
+    margin-bottom: 0;
+    line-height: 1;
+    width: 65%;
+    font-size: 38px;
+}
+.text_clearfix span{
+    float: right;
+    font-size: 22px;
+}
+.text_clearfix span i{
+    margin-left: 15px;
+}
+.image_text .flash{
+    width: 100%;
+    height: 520px;
+    margin: auto;
+    position: relative;
+}
+.rushb{
+    width: 70%;
+    margin: auto;
+}
+.rl{
+   
+    float: left;
+    width: 50%;
+    height: 400px;
+    margin-top:60px ;
+    background-color:#dde6ed;
+}
+.rr{
+    float: left;
+    width: 50%;
+}
+.rl-text{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+.rl-text p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin-bottom: 0;
+}
+.rl-text span{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.rl-text div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 22px;
+}
+.thel{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 100px;
+    height: 520px;
+    line-height: 520px;
+    font-size: 50px;
+    color: #f66f6a;
+}
+.ther{
+    position: absolute;
+    top: 0;
+    right:60px;
+   width: 50px;
+    height: 520px;
+    line-height: 520px;
+    font-size: 50px;
+    color: #f66f6a;
+}
+.radis{
+    margin-top: 50px;
+    width: 60px;
+    margin:50px auto 0;   
+}
+.radis .dd{
+    text-align: center;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #222222;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    background-color: #222222 ;
+}
+.radis .aa{
+    float: left;
+    text-align: center;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #222222;
+    border-radius: 50%;
+}
+/*展会中心 结束*/
+
+/*成功故事 开始*/
+.success{
+    max-width: 1366px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+.case{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.case-items{
+    position: relative;
+    width: 300px;
+}
+.case-items img{
+    width: 300px;
+}
+.case-items:hover img{
+    margin-left: -20px;
+}
+.story{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    height: 260px;
+    background-color: #dde6ed;
+    z-index: -10;
+    border-radius: 5px;
+}
+.story .story-item{
+    width: 230px;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.story .story-item p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin-bottom: 0;
+}
+.story .story-item span{
+    font-size: 22px;
+    line-height: 60px;
+} 
+/*成功故事 结束*/
+
+/*结尾 开始*/
+.final{
+    width: 100%;
+    height: 650px;
+    background-color: #e5e5e5;
+}
+/*结尾 结束*/
+
+/*结尾 开始*/
+.nav-final{
+    width: 100%;
+    background-color:#222222 ;
+    height: 30px;
+}
+.bod{
+    width: 1136px;
+    margin: auto;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.qq{
+    float: left;
+}
+.zz{
+    float: right;
+}
+/*结尾 结束*/
