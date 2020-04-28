@@ -122,6 +122,7 @@ li span{
     background: #e5e5e5;
     top: 100%;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    z-index: 100;
     
 }
 .list .row{
@@ -644,8 +645,91 @@ li span{
 /*结尾 开始*/
 .final{
     width: 100%;
-    height: 650px;
     background-color: #e5e5e5;
+}
+.final-body{
+    width: 1100px;
+    height: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0 0 0;
+}
+.final-item{
+    width: 25%;
+    float: left;
+  
+}
+.final-item-sm{
+    width: 16.66666666%;
+    float: left;
+}
+.final-item-sm h3{
+    font-size: 22px;
+    padding:0 0 20px 0;
+}
+.final-item>ul{
+    list-style: none;
+   
+}
+.final-item>ul>li{
+    display: block;
+    list-style: none;
+     font-size: 16px;
+     padding: 10px 0;
+}
+.final-item-sm>ul{
+    list-style: none;
+   
+}
+.final-item-sm>ul>li{
+    display: block;
+    list-style: none;
+     font-size: 16px;
+     padding: 10px 0;
+}
+.social{
+    width: 8.33333333%;
+    float: left;
+}
+.final-item h3{
+    font-size: 22px;
+    padding:0 0 20px 0;
+}
+.social>ul{
+    list-style: none;
+}
+.social>ul>li{
+    list-style: none;
+    display: block;
+    margin:0 0 20px 0 ;
+}
+.social>ul>li svg{
+    height: 30px;
+    width: 30px;
+}
+.rukou{
+    width:1100px ;
+    height: 150px;
+    margin: auto;
+}
+.rukou h3{
+    font-size: 22px;
+    padding: 0 0 20px 0;
+}
+.zp{
+    width: 100%;
+}
+.zp>.item{
+    width: 25%;
+    font-size: 16px;
+    float: left;
+    padding: 0 0 10px 0;
+}
+.white_box{
+    width: 1100px;
+    margin: auto;
+    height: 120px;
+    
 }
 /*结尾 结束*/
 
